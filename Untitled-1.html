@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suman Marketplace - C2C Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Amazon-inspired Styles */
+        :root {
+            --amazon-orange: #FF9900;
+            --amazon-dark: #131921;
+            --amazon-light: #232F3E;
+            --amazon-gray: #EAEDED;
+        }
+
+        body {
+            font-family: 'Amazon Ember', Arial, sans-serif;
+            background-color: var(--amazon-gray);
+            margin: 0;
+        }
+
+        /* Header Styles */
+        .navbar {
+            background-color: var(--amazon-dark);
+            height: 60px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            color: white;
+        }
+
+        .logo {
+            width: 100px;
+            margin-right: 20px;
+        }
+
+        .search-bar {
+            flex-grow: 1;
+            display: flex;
+            max-width: 800px;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px 0 0 4px;
+        }
+
+        .search-button {
+            background-color: var(--amazon-orange);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+
+        .header-nav {
+            display: flex;
+            margin-left: 20px;
+        }
+
+        .nav-item {
+            padding: 0 15px;
+            cursor: pointer;
+        }
+
+        /* Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .product-card {
+            background: white;
+            padding: 20px;
+            border-radius: 4px;
+            position: relative;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+
+        .product-price {
+            color: #B12704;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .product-rating {
+            color: var(--amazon-orange);
+            margin: 10px 0;
+        }
+
+        .add-to-cart {
+            background-color: var(--amazon-orange);
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        /* Deal Badge */
+        .deal-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: #CC0C39;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+
+        /* Navigation Menu */
+        .sub-nav {
+            background-color: var(--amazon-light);
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .menu-items {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu-item {
+            padding: 0 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar">
+        <img src="logo.png" alt="Logo" class="logo">
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Search products...">
+            <button class="search-button"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="header-nav">
+            <div class="nav-item">Account & Lists</div>
+            <div class="nav-item">Returns & Orders</div>
+            <div class="nav-item"><i class="fas fa-shopping-cart"></i> Cart</div>
+        </div>
+    </nav>
+
+    <!-- Sub Navigation -->
+    <div class="sub-nav">
+        <ul class="menu-items">
+            <li class="menu-item">Today's Deals</li>
+            <li class="menu-item">Customer Service</li>
+            <li class="menu-item">Gift Cards</li>
+            <li class="menu-item">Sell Products</li>
+        </ul>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="product-grid">
+        <!-- Product Card 1 -->
+        <div class="product-card">
+            <span class="deal-badge">Limited Time Deal</span>
+            <img src="product1.jpg" alt="Product" class="product-image">
+            <h3 class="product-title">High Quality Wireless Headphones</h3>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                4.5 (1234)
+            </div>
+            <div class="product-price">$89.99</div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Repeat other product cards similarly -->
+    </div>
+
+    <!-- Footer -->
+    <footer style="background: var(--amazon-light); color: white; padding: 40px 20px;">
+        <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px;">
+            <div>
+                <h4>Get to Know Us</h4>
+                <p>About Us</p>
+                <p>Careers</p>
+                <p>Press Releases</p>
+            </div>
+            <div>
+                <h4>Make Money with Us</h4>
+                <p>Sell on Suman</p>
+                <p>Become an Affiliate</p>
+                <p>Advertise Your Products</p>
+            </div>
+            <div>
+                <h4>Payment Methods</h4>
+                <p>Credit Cards</p>
+                <p>Digital Wallet</p>
+                <p>Cash on Delivery</p>
+            </div>
+            <div>
+                <h4>Let Us Help You</h4>
+                <p>Your Account</p>
+                <p>Shipping Rates</p>
+                <p>Returns & Replacements</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add Amazon-like interactions
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', function() {
+                const product = this.parentElement.querySelector('.product-title').textContent;
+                alert(`Added ${product} to cart!`);
+            });
+        });
+
+        // Search functionality
+        document.querySelector('.search-button').addEventListener('click', function() {
+            const query = document.querySelector('.search-input').value;
+            alert(`Searching for: ${query}`);
+        });
+    </script>
+</body>
+</html>

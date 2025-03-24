@@ -1,0 +1,64 @@
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Suman Project - C2C Marketplace</title>
+      <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+      <header>
+        <div class="container">
+          <h1>Suman Project</h1>
+          <nav>
+            <ul>
+              <li><a href="suman.html">Home</a></li>
+              <li><a href="#products">Products</a></li>
+              <li><a href="#sell">Sell</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="feedback.html">Feedback</a></li> <!-- Link to Feedback Page -->
+            </ul>
+          </nav>
+        </div>
+      </header>
+    
+      <section id="home" class="hero">
+        <div class="container">
+          <h2>Welcome to Suman Project</h2>
+          <p>Your one-stop destination to buy and sell goods!</p>
+          <a href="#products" class="btn">Explore Products</a>
+        </div>
+      </section>
+    
+      <section id="products" class="products">
+        <div class="container">
+          <h2>Featured Products</h2>
+          <div class="product-grid" id="productGrid">
+            <!-- Product cards will be dynamically added here -->
+          </div>
+        </div>
+      </section>
+    
+      <section id="sell" class="sell">
+        <div class="container">
+          <h2>Sell Your Products</h2>
+          <form id="sellForm">
+            <input type="text" id="productName" placeholder="Product Name" required>
+            <input type="number" id="productPrice" placeholder="Price" required>
+            <textarea id="productDescription" placeholder="Product Description" required></textarea>
+            <input type="file" id="productImage" accept="image/*" required>
+            <button type="submit" class="btn">List Product</button>
+          </form>
+        </div>
+      </section>
+    
+      <footer id="contact">
+        <div class="container">
+          <p>&copy; 2023 Suman Project. All rights reserved.</p>
+          <p>Contact us: <a href="mailto:info@suman.com">info@sumanproject.com</a></p>
+          <a href="feedback.html">Feedback</a>
+        </div>
+      </footer>
+    
+      <script src="script.js"></script>
+    </body>
+    </html>

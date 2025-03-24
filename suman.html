@@ -1,0 +1,109 @@
+
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suman Project - C2C Marketplace</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Suman Project - A C2C marketplace to buy and sell products easily.">
+  <meta name="keywords" content="C2C, marketplace, buy, sell, products, Suman Project">
+  <meta name="author" content="Suman Project">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Suman Project</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="sell.html">Sell</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="hero" style="background-image: url('d');">
+    <div class="container">
+      <h2>Welcome to Suman Project</h2>
+      <p>Your one-stop destination to buy and sell goods!</p>
+      <a href="#products" class="btn">Explore Products</a>
+    </div>
+  </section>
+
+  <section id="products" class="products">
+  <div class="container">
+    <h2>Featured Products</h2>
+    <div class="product-grid">
+     
+      <div class="product-item">
+        <img src="s.jpeg" alt="iPhone">
+        <h3>BLACK WIG</h3>
+        <p>$720.00</p>
+        <button class="btn buy-now" data-product="BLACK WIG" data-price="720">Buy Now</button>
+      </div>
+      <div class="product-item">
+        <img src="1.jpeg" alt="LIVERPOOL">
+        <h3>LIVERPOOL</h3>
+        <p>$1999999.00</p>
+        <button class="btn buy-now" data-product="LIVERPOOL" data-price="1999999">Buy Now</button>
+      </div>
+      <div class="product-item">
+        <img src="2.jpeg" alt="BHASKAR MEMORIAL SCHOOL">
+        <h3>BHASKAR MEMORIAL SCHOOL</h3>
+        <p>FREE</p>
+        <button class="btn buy-now" data-product="BHASKAR MEMORIAL SCHOOL" data-price="FREE">Buy Now</button>
+      </div>
+      <div class="product-item">
+        <img src="3.jpg" alt="12 NEB QUESTION PAPER 2082">
+        <h3>12 NEB QUESTION PAPER 2082</h3>
+        <p>$69.00</p>
+        <button class="btn buy-now" data-product="12 NEB QUESTION PAPER 2082 " data-price="69">Buy Now</button>
+      </div>
+      <div class="product-item">
+        <img src="4.jpg" alt="FACEBOOK">
+        <h3>FACEBOOK</h3>
+        <p>$400000000000.00</p>
+        <button class="btn buy-now" data-product="FACEBOOK" data-price="400000000000">Buy Now</button>
+      </div>
+      <div class="product-item">
+        <img src="6.jpg" alt="JACK DANIELS">
+        <h3>JACK DANIELS</h3>
+        <p>$50.00</p>
+        <button class="btn buy-now" data-product="JACK DANIELS" data-price="50">Buy Now</button>
+      </div>
+     
+    </div>
+  </div>
+</section>
+
+<style>
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: center;
+    padding: 20px;
+  }
+  .product-item {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .product-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+</style>
+
+
+  <script src="script.js"></script>
+
+  <script src="buyNow.js"></script>
+</body>
+</html>                                                 

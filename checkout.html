@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .checkout-container {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      width: 300px;
+    }
+    h2, h3 {
+      color: #333;
+    }
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    #qr-code {
+      display: none;
+      margin-top: 20px;
+    }
+    img {
+      width: 200px;
+      height: 200px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .button-group {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      color: white;
+    }
+    .back-button {
+      background-color: #007bff;
+    }
+    .back-button:hover {
+      background-color: #0056b3;
+    }
+    .finish-button {
+      background-color: #28a745;
+    }
+    .finish-button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+  <div class="checkout-container">
+    <h2>Checkout</h2>
+    <p id="product-details"></p>
+    <h3>Select Payment Method:</h3>
+    <select id="payment-method">
+      <option value="">--Choose Payment Method--</option>
+      <option value="esewa">IME Pay</option>
+      <option value="esewa">Khalti</option>
+      <option value="esewa">eSewa</option>
+      <option value="esewa">Fone Pay</option>
+    </select>
+    <div id="qr-code">
+      <h3>Scan the QR Code to Pay</h3>
+      <img id="qr-image" src="esewa-qr.jpg" alt="QR Code">
+      
+      <div class="button-group">
+        <button class="button back-button" onclick="goBack()">Back</button>
+        <button class="button finish-button" onclick="finishTransaction()">Finish</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Extract URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const product = urlParams.get('product');
+    const price = urlParams.get('price');
+    
+    document.getElementById('product-details').innerText = `You are purchasing: ${product} for $${price}`;
+    
+    const paymentMethod = document.getElementById('payment-method');
+    const qrCodeDiv = document.getElementById('qr-code');
+    const qrImage = document.getElementById('qr-image');
+
+    paymentMethod.addEventListener('change', function() {
+      if (this.value) {
+        qrCodeDiv.style.display = 'block';
+        qrImage.src = `${this.value}-qr.jpg`; // Use JPG format for QR codes
+      } else {
+        qrCodeDiv.style.display = 'none';
+      }
+    });
+
+    function goBack() {
+      window.history.back();
+    }
+
+    function finishTransaction() {
+      alert("Transaction Completed! Thank you for your purchase.");
+      window.location.href = "suman.html"; // Redirect to homepage or confirmation page
+    }
+  </script>
+</body>
+</html>
